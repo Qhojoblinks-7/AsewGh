@@ -6,9 +6,14 @@ const indexRoute = {
   component: () => require('./routes/index').default,
 };
 
+const searchRoute = {
+  path: '/search',
+  component: () => require('./screens/SearchScreen').default,
+};
+
 // Create the router
 const router = createRouter({
-  routeTree: [indexRoute],
+  routeTree: [indexRoute, searchRoute],
   defaultPreload: 'intent',
 });
 
